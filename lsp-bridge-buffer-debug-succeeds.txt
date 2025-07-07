@@ -1,0 +1,937 @@
+Eval in Emacs: (lsp-bridge--first-start '47925)
+Eval in Emacs: (message '"[LSP-Bridge] found language server: /home/tromer/src/lsp-bridge-repro/.venv/bin/basedpyright-langserver")
+Eval in Emacs: (message '"[LSP-Bridge] Error: can't find command 'ruff' to start LSP server ruff (/home/tromer/src/lsp-bridge-repro/example.py)")
+Eval in Emacs: (message '"[LSP-Bridge] found language server: /home/tromer/src/lsp-bridge-repro/.venv/bin/basedpyright-langserver")
+Start lsp server (basedpyright) for /home/tromer/src/lsp-bridge-repro
+Eval in Emacs: (message '"[LSP-Bridge] Active project 'lsp-bridge-repro', enjoy hacking!")
+Handlers: [<class 'core.handler.completion.Completion'>,
+ <class 'core.handler.completion_item.CompletionItem'>,
+ <class 'core.handler.find_define.FindDefine'>,
+ <class 'core.handler.find_type_define.FindTypeDefine'>,
+ <class 'core.handler.find_implementation.FindImplementation'>,
+ <class 'core.handler.find_references.FindReferences'>,
+ <class 'core.handler.peek.PeekFindDefine'>,
+ <class 'core.handler.peek.PeekFindReferences'>,
+ <class 'core.handler.hover.Hover'>,
+ <class 'core.handler.signature_help.SignatureHelp'>,
+ <class 'core.handler.prepare_rename.PrepareRename'>,
+ <class 'core.handler.rename.Rename'>,
+ <class 'core.handler.jdt_uri_resolver.JDTUriResolver'>,
+ <class 'core.handler.deno_uri_resolver.DenoUriResolver'>,
+ <class 'core.handler.csharp_uri_resolver.CSharpUriResolver'>,
+ <class 'core.handler.code_action.CodeAction'>,
+ <class 'core.handler.formatting.Formatting'>,
+ <class 'core.handler.range_formatting.RangeFormatting'>,
+ <class 'core.handler.execute_command.ExecuteCommand'>,
+ <class 'core.handler.workspace_symbol.WorkspaceSymbol'>,
+ <class 'core.handler.completion_workspace_symbol.CompletionWorkspaceSymbol'>,
+ <class 'core.handler.call_hierarchy.PrepareCallHierarchy'>,
+ <class 'core.handler.call_hierarchy.CallHierarchy'>,
+ <class 'core.handler.call_hierarchy.PrepareCallHierarchyIncomingCalls'>,
+ <class 'core.handler.call_hierarchy.PrepareCallHierarchyOutgoingCalls'>,
+ <class 'core.handler.call_hierarchy.CallHierarchyIncomingCalls'>,
+ <class 'core.handler.call_hierarchy.CallHierarchyOutgoingCalls'>,
+ <class 'core.handler.document_symbol.DocumentSymbol'>,
+ <class 'core.handler.imenu.IMenu'>,
+ <class 'core.handler.jdtls.jdtls_list_overridable_methods.JdtlsListOverridableMethods'>,
+ <class 'core.handler.jdtls.jdtls_add_overridable_methods.JdtlsAddOverridableMethods'>,
+ <class 'core.handler.inlay_hint.InlayHint'>,
+ <class 'core.handler.semantic_tokens.SemanticTokens'>,
+ <class 'core.handler.rust_expand_macro.RustExpandMacro'>,
+ <class 'core.handler.rust_reload_workspace.RustReloadWorkspace'>,
+ <class 'core.handler.workspace_diagnostics.WorkspaceDiagnostics'>,
+ <class 'core.handler.diagnostic.Diagnostic'>]
+
+--- [09:49:41.836529] Send initialize request (43425) to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 43425,
+   "method": "initialize",
+   "params": {
+      "processId": 2708,
+      "rootPath": "/home/tromer/src/lsp-bridge-repro",
+      "clientInfo": {
+         "name": "emacs",
+         "version": "lsp-bridge"
+      },
+      "rootUri": "file:///home/tromer/src/lsp-bridge-repro",
+      "capabilities": {
+         "workspace": {
+            "configuration": true,
+            "symbol": {
+               "resolveSupport": {
+                  "properties": []
+               }
+            },
+            "didChangeWatchedFiles": {
+               "dynamicRegistration": true,
+               "relativePatternSupport": true
+            }
+         },
+         "textDocument": {
+            "completion": {
+               "completionItem": {
+                  "snippetSupport": true,
+                  "deprecatedSupport": true,
+                  "tagSupport": {
+                     "valueSet": [
+                        1
+                     ]
+                  },
+                  "resolveSupport": {
+                     "properties": [
+                        "documentation",
+                        "detail",
+                        "additionalTextEdits"
+                     ]
+                  }
+               }
+            },
+            "codeAction": {
+               "dynamicRegistration": false,
+               "codeActionLiteralSupport": {
+                  "codeActionKind": {
+                     "valueSet": [
+                        "quickfix",
+                        "refactor",
+                        "refactor.extract",
+                        "refactor.inline",
+                        "refactor.rewrite",
+                        "source",
+                        "source.organizeImports"
+                     ]
+                  }
+               },
+               "isPreferredSupport": true
+            },
+            "inlayHint": {
+               "dynamicRegistration": false
+            },
+            "hover": {
+               "contentFormat": [
+                  "markdown",
+                  "plaintext"
+               ],
+               "dynamicRegistration": true
+            },
+            "formatting": {
+               "dynamicRegistration": true
+            },
+            "rangeFormatting": {
+               "dynamicRegistration": true
+            },
+            "onTypeFormatting": {
+               "dynamicRegistration": true
+            },
+            "publishDiagnostics": {
+               "relatedInformation": true,
+               "tagSupport": {
+                  "valueSet": [
+                     1,
+                     2
+                  ]
+               },
+               "versionSupport": true,
+               "codeDescriptionSupport": true,
+               "dataSupport": true
+            },
+            "diagnostic": {
+               "relatedInformation": true,
+               "tagSupport": {
+                  "valueSet": [
+                     1,
+                     2
+                  ]
+               },
+               "codeDescriptionSupport": true,
+               "dataSupport": true,
+               "dynamicRegistration": false,
+               "relatedDocumentSupport": false
+            }
+         },
+         "window": {
+            "workDoneProgress": true
+         }
+      },
+      "initializationOptions": {}
+   },
+   "jsonrpc": "2.0"
+}
+Eval in Emacs: (lsp-bridge-set-prefix-style '"ascii")
+Eval in Emacs: (lsp-bridge-set-server-names '"/home/tromer/src/lsp-bridge-repro/example.py" '"" '("basedpyright"))
+
+--- [09:49:42.050502] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "basedpyright language server 1.29.5 starting"
+   }
+}
+
+--- [09:49:42.050788] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Server root directory: file:///home/tromer/src/lsp-bridge-repro/.venv/lib/python3.13/site-packages/basedpyright/dist"
+   }
+}
+
+--- [09:49:42.059510] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Starting service instance \"\""
+   }
+}
+
+--- [09:49:42.059782] Recv response (43425) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 43425,
+   "result": {
+      "capabilities": {
+         "textDocumentSync": {
+            "willSave": true,
+            "change": 2,
+            "openClose": true
+         },
+         "notebookDocumentSync": {
+            "notebookSelector": [
+               {
+                  "notebook": {
+                     "scheme": "file",
+                     "notebookType": "jupyter-notebook"
+                  },
+                  "cells": [
+                     {
+                        "language": "python"
+                     }
+                  ]
+               }
+            ],
+            "save": true
+         },
+         "definitionProvider": {
+            "workDoneProgress": true
+         },
+         "declarationProvider": {
+            "workDoneProgress": true
+         },
+         "typeDefinitionProvider": {
+            "workDoneProgress": true
+         },
+         "referencesProvider": {
+            "workDoneProgress": true
+         },
+         "documentSymbolProvider": {
+            "workDoneProgress": true
+         },
+         "workspaceSymbolProvider": {
+            "workDoneProgress": true
+         },
+         "hoverProvider": {
+            "workDoneProgress": true
+         },
+         "documentHighlightProvider": {
+            "workDoneProgress": true
+         },
+         "renameProvider": {
+            "prepareProvider": true,
+            "workDoneProgress": true
+         },
+         "completionProvider": {
+            "triggerCharacters": [
+               ".",
+               "[",
+               "\"",
+               "'"
+            ],
+            "resolveProvider": true,
+            "workDoneProgress": true,
+            "completionItem": {
+               "labelDetailsSupport": true
+            }
+         },
+         "signatureHelpProvider": {
+            "triggerCharacters": [
+               "(",
+               ",",
+               ")"
+            ],
+            "workDoneProgress": true
+         },
+         "codeActionProvider": {
+            "codeActionKinds": [
+               "quickfix",
+               "source.organizeImports"
+            ],
+            "workDoneProgress": true
+         },
+         "executeCommandProvider": {
+            "commands": [],
+            "workDoneProgress": true
+         },
+         "callHierarchyProvider": true,
+         "inlayHintProvider": true,
+         "semanticTokensProvider": {
+            "legend": {
+               "tokenTypes": [
+                  "class",
+                  "parameter",
+                  "typeParameter",
+                  "function",
+                  "method",
+                  "decorator",
+                  "property",
+                  "namespace",
+                  "variable",
+                  "type",
+                  "keyword",
+                  "selfParameter",
+                  "clsParameter"
+               ],
+               "tokenModifiers": [
+                  "definition",
+                  "declaration",
+                  "async",
+                  "readonly",
+                  "defaultLibrary",
+                  "builtin"
+               ]
+            },
+            "full": true
+         },
+         "workspace": {
+            "fileOperations": {
+               "willRename": {
+                  "filters": [
+                     {
+                        "pattern": {
+                           "glob": "**/*"
+                        }
+                     }
+                  ]
+               }
+            },
+            "workspaceFolders": {
+               "supported": true,
+               "changeNotifications": true
+            }
+         }
+      },
+      "serverInfo": {
+         "name": "basedpyright",
+         "version": "1.29.5"
+      }
+   }
+}
+
+--- [09:49:42.060099] Send initialized notification to 'basedpyright' for project lsp-bridge-repro
+{
+   "method": "initialized",
+   "params": {},
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.060254] Send workspace/didChangeConfiguration notification to 'basedpyright' for project lsp-bridge-repro
+{
+   "method": "workspace/didChangeConfiguration",
+   "params": {
+      "settings": {
+         "python.analysis": {
+            "autoImportCompletions": true,
+            "typeshedPaths": [],
+            "stubPath": "",
+            "useLibraryCodeForTypes": true,
+            "diagnosticMode": "openFilesOnly",
+            "typeCheckingMode": "basic",
+            "logLevel": "verbose",
+            "autoSearchPaths": true,
+            "extraPaths": []
+         },
+         "pythonPath": "python",
+         "venvPath": ""
+      }
+   },
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.060366] Send textDocument/didOpen notification to 'basedpyright' for project lsp-bridge-repro
+{
+   "method": "textDocument/didOpen",
+   "params": {
+      "textDocument": {
+         "uri": "file:///home/tromer/src/lsp-bridge-repro/example.py",
+         "languageId": "python",
+         "version": 0,
+         "text": "# import nosuchpackage\n# if a == None:\n#    print(\"message\")\ndef abc() -> int:\n    return \"abc\"\n\n"
+      }
+   },
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.062210] Recv workspace/configuration request (0) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 0,
+   "method": "workspace/configuration",
+   "params": {
+      "items": [
+         {
+            "scopeUri": "file:///home/tromer/src/lsp-bridge-repro",
+            "section": "python"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.062406] Send response to server request 0 to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 0,
+   "result": [
+      {}
+   ],
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.062550] Recv workspace/configuration request (1) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 1,
+   "method": "workspace/configuration",
+   "params": {
+      "items": [
+         {
+            "scopeUri": "file:///home/tromer/src/lsp-bridge-repro",
+            "section": "python"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.062752] Send response to server request 1 to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 1,
+   "result": [
+      {}
+   ],
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.063653] Recv workspace/configuration request (2) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 2,
+   "method": "workspace/configuration",
+   "params": {
+      "items": [
+         {
+            "scopeUri": "file:///home/tromer/src/lsp-bridge-repro",
+            "section": "basedpyright.analysis"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.063795] Send response to server request 2 to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 2,
+   "result": [
+      {}
+   ],
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.063947] Recv workspace/configuration request (3) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 3,
+   "method": "workspace/configuration",
+   "params": {
+      "items": [
+         {
+            "scopeUri": "file:///home/tromer/src/lsp-bridge-repro",
+            "section": "basedpyright.analysis"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.064093] Send response to server request 3 to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 3,
+   "result": [
+      {}
+   ],
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.064317] Recv workspace/configuration request (4) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 4,
+   "method": "workspace/configuration",
+   "params": {
+      "items": [
+         {
+            "scopeUri": "file:///home/tromer/src/lsp-bridge-repro",
+            "section": "basedpyright"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.064412] Send response to server request 4 to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 4,
+   "result": [
+      {}
+   ],
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.064773] Recv workspace/configuration request (5) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 5,
+   "method": "workspace/configuration",
+   "params": {
+      "items": [
+         {
+            "scopeUri": "file:///home/tromer/src/lsp-bridge-repro",
+            "section": "basedpyright"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.064870] Send response to server request 5 to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 5,
+   "result": [
+      {}
+   ],
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.194594] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Loading pyproject.toml file at /home/tromer/src/lsp-bridge-repro/pyproject.toml"
+   }
+}
+
+--- [09:49:42.231237] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Pyproject file \"/home/tromer/src/lsp-bridge-repro/pyproject.toml\" has no \"[tool.basedpyright]\" section."
+   }
+}
+
+--- [09:49:42.241816] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "No include entries specified; assuming /home/tromer/src/lsp-bridge-repro"
+   }
+}
+
+--- [09:49:42.252309] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Auto-excluding **/node_modules"
+   }
+}
+
+--- [09:49:42.262809] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Auto-excluding **/__pycache__"
+   }
+}
+
+--- [09:49:42.273263] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Auto-excluding **/.*"
+   }
+}
+
+--- [09:49:42.283834] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Assuming Python version 3.13.5.final.0"
+   }
+}
+
+--- [09:49:42.294452] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Found 1 source file"
+   }
+}
+
+--- [09:49:42.305145] Recv client/registerCapability request (6) from 'basedpyright' for project lsp-bridge-repro
+
+--- [09:49:42.381832] Add workspace watch files: ['/home/tromer/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/']
+{
+   "jsonrpc": "2.0",
+   "id": 6,
+   "method": "client/registerCapability",
+   "params": {
+      "registrations": [
+         {
+            "id": "e9e200c4-dba1-4d26-8bb5-ad6b634136b4",
+            "method": "workspace/didChangeWatchedFiles",
+            "registerOptions": {
+               "watchers": [
+                  {
+                     "globPattern": "**/pyrightconfig.json",
+                     "kind": 7
+                  },
+                  {
+                     "globPattern": "**",
+                     "kind": 7
+                  },
+                  {
+                     "globPattern": {
+                        "baseUri": "file:///home/tromer/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13",
+                        "pattern": "**"
+                     },
+                     "kind": 7
+                  }
+               ]
+            }
+         }
+      ]
+   }
+}
+
+--- [09:49:42.397463] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+
+--- [09:49:42.397667] Send response to server request 6 to 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Loading pyproject.toml file at /home/tromer/src/lsp-bridge-repro/pyproject.toml"
+   }
+}
+{
+   "id": 6,
+   "result": null,
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:42.416938] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Pyproject file \"/home/tromer/src/lsp-bridge-repro/pyproject.toml\" has no \"[tool.basedpyright]\" section."
+   }
+}
+
+--- [09:49:42.435404] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "No include entries specified; assuming /home/tromer/src/lsp-bridge-repro"
+   }
+}
+
+--- [09:49:42.440806] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Auto-excluding **/node_modules"
+   }
+}
+
+--- [09:49:42.461799] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Auto-excluding **/__pycache__"
+   }
+}
+
+--- [09:49:42.482677] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Auto-excluding **/.*"
+   }
+}
+
+--- [09:49:42.498302] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Assuming Python version 3.13.5.final.0"
+   }
+}
+
+--- [09:49:42.508840] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "Found 1 source file"
+   }
+}
+
+--- [09:49:42.519389] Recv client/registerCapability request (7) from 'basedpyright' for project lsp-bridge-repro
+
+--- [09:49:42.535022] Add workspace watch files: ['/home/tromer/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13/']
+{
+   "jsonrpc": "2.0",
+   "id": 7,
+   "method": "client/registerCapability",
+   "params": {
+      "registrations": [
+         {
+            "id": "7db83221-91e2-45a9-9e64-6582efd6becf",
+            "method": "workspace/didChangeWatchedFiles",
+            "registerOptions": {
+               "watchers": [
+                  {
+                     "globPattern": "**/pyrightconfig.json",
+                     "kind": 7
+                  },
+                  {
+                     "globPattern": "**",
+                     "kind": 7
+                  },
+                  {
+                     "globPattern": {
+                        "baseUri": "file:///home/tromer/.local/share/uv/python/cpython-3.13.5-linux-x86_64-gnu/lib/python3.13",
+                        "pattern": "**"
+                     },
+                     "kind": 7
+                  }
+               ]
+            }
+         }
+      ]
+   }
+}
+
+--- [09:49:42.545676] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "BG: Background analysis(1) root directory: file:///home/tromer/src/lsp-bridge-repro/.venv/lib/python3.13/site-packages/basedpyright/dist"
+   }
+}
+
+--- [09:49:42.556272] Send response to server request 7 to 'basedpyright' for project lsp-bridge-repro
+
+--- [09:49:42.566506] Recv window/logMessage notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 7,
+   "result": null,
+   "jsonrpc": "2.0"
+}
+{
+   "jsonrpc": "2.0",
+   "method": "window/logMessage",
+   "params": {
+      "type": 3,
+      "message": "BG: Background analysis(1) started"
+   }
+}
+
+--- [09:49:42.629587] Recv window/workDoneProgress/create request (8) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 8,
+   "method": "window/workDoneProgress/create",
+   "params": {
+      "token": "68b3e281-024b-4ed5-b808-6f786b603722"
+   }
+}
+
+--- [09:49:42.629758] Recv client/unregisterCapability request (9) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 9,
+   "method": "client/unregisterCapability",
+   "params": {
+      "unregisterations": [
+         {
+            "id": "e9e200c4-dba1-4d26-8bb5-ad6b634136b4",
+            "method": "workspace/didChangeWatchedFiles"
+         }
+      ]
+   }
+}
+
+--- [09:49:42.635061] Send response to server request 8 to 'basedpyright' for project lsp-bridge-repro
+
+--- [09:49:42.645876] Recv $/progress notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 8,
+   "result": null,
+   "jsonrpc": "2.0"
+}
+{
+   "jsonrpc": "2.0",
+   "method": "$/progress",
+   "params": {
+      "token": "68b3e281-024b-4ed5-b808-6f786b603722",
+      "value": {
+         "kind": "begin",
+         "title": ""
+      }
+   }
+}
+
+--- [09:49:42.693455] Recv $/progress notification from 'basedpyright' for project lsp-bridge-repro
+Eval in Emacs: (lsp-bridge--record-work-done-progress '"[LSP-Bridge] 68b3e281-024b-4ed5-b808-6f786b603722 1 file to analyze")
+{
+   "jsonrpc": "2.0",
+   "method": "$/progress",
+   "params": {
+      "token": "68b3e281-024b-4ed5-b808-6f786b603722",
+      "value": {
+         "kind": "report",
+         "message": "1 file to analyze"
+      }
+   }
+}
+
+--- [09:49:42.808652] Recv textDocument/publishDiagnostics notification from 'basedpyright' for project lsp-bridge-repro
+
+--- [09:49:42.814014] Record diagnostics from 'basedpyright' for file example.py
+{
+   "jsonrpc": "2.0",
+   "method": "textDocument/publishDiagnostics",
+   "params": {
+      "uri": "file:///home/tromer/src/lsp-bridge-repro/example.py",
+      "version": 0,
+      "diagnostics": [
+         {
+            "range": {
+               "start": {
+                  "line": 4,
+                  "character": 11
+               },
+               "end": {
+                  "line": 4,
+                  "character": 16
+               }
+            },
+            "message": "Type \"Literal['abc']\" is not assignable to return type \"int\"\n\u00a0\u00a0\"Literal['abc']\" is not assignable to \"int\"",
+            "severity": 1,
+            "code": "reportReturnType",
+            "source": "basedpyright",
+            "codeDescription": {
+               "href": "https://docs.basedpyright.com/v1.29.5/configuration/config-files/#reportReturnType"
+            }
+         }
+      ]
+   }
+}
+
+--- [09:49:42.830140] Recv $/progress notification from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "method": "$/progress",
+   "params": {
+      "token": "68b3e281-024b-4ed5-b808-6f786b603722",
+      "value": {
+         "kind": "end"
+      }
+   }
+}
+Eval in Emacs: (lsp-bridge-diagnostic--render '"/home/tromer/src/lsp-bridge-repro/example.py" '"" '((:range (:start (:line 4 :character 11) :end (:line 4 :character 16)) :message "Type \"Literal['abc']\" is not assignable to return type \"int\"\n  \"Literal['abc']\" is not assignable to \"int\"" :severity 1 :code "reportReturnType" :source "basedpyright" :codeDescription (:href "https://docs.basedpyright.com/v1.29.5/configuration/config-files/#reportReturnType") :server-name "basedpyright")) '1)
+
+--- [09:49:51.443055] Send textDocument/signatureHelp request (61273) to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 61273,
+   "method": "textDocument/signatureHelp",
+   "params": {
+      "position": {
+         "line": 4,
+         "character": 11
+      },
+      "textDocument": {
+         "uri": "file:///home/tromer/src/lsp-bridge-repro/example.py"
+      }
+   },
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:51.603148] Recv textDocument/signatureHelp response (61273) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 61273,
+   "result": null
+}
+
+--- [09:49:54.093099] Send textDocument/signatureHelp request (3390) to 'basedpyright' for project lsp-bridge-repro
+{
+   "id": 3390,
+   "method": "textDocument/signatureHelp",
+   "params": {
+      "position": {
+         "line": 4,
+         "character": 0
+      },
+      "textDocument": {
+         "uri": "file:///home/tromer/src/lsp-bridge-repro/example.py"
+      }
+   },
+   "jsonrpc": "2.0"
+}
+
+--- [09:49:54.095811] Recv textDocument/signatureHelp response (3390) from 'basedpyright' for project lsp-bridge-repro
+{
+   "jsonrpc": "2.0",
+   "id": 3390,
+   "result": null
+}
